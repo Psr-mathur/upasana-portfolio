@@ -1,13 +1,7 @@
 import { connectToDatabase } from '../../../lib/db/connectDB';
 import { Project } from '../../../models/Project';
+import { toSimpleObject } from '../../../utils/convert';
 import ProjectForm from '../../addProject/form';
-
-const toSimpleObject = (res) => {
-	if (typeof res === Object) {
-		return JSON.parse(JSON.stringify(res));
-	}
-	return res.map((item) => JSON.parse(JSON.stringify(item)));
-};
 
 export default async function page({ params }) {
 	const projectId = params.id;
@@ -26,7 +20,7 @@ export default async function page({ params }) {
 
 	const data = await fetchData();
 
-	console.log(data);
+	// console.log(data);
 
 	return <ProjectForm forEdit={true} data={data[0]} />;
 }

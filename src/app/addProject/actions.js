@@ -25,12 +25,14 @@ export async function EditProject(id, data) {
 	// console.log(data);
 	try {
 		await connectToDatabase();
-		const newProject = new Project(data);
-		await newProject.save();
+		const updatedProject = await Project.findByIdAndUpdate(id, data, {
+			new: true,
+		});
+		// await updatedProject.save();
 		return {
 			status: 'success',
-			message: 'New project created!',
-			data: JSON.parse(JSON.stringify(newProject)),
+			message: 'Project edited!',
+			data: JSON.parse(JSON.stringify(updatedProject)),
 		};
 	} catch (error) {
 		return {

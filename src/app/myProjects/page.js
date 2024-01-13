@@ -1,18 +1,29 @@
 import { twMerge } from 'tailwind-merge';
 import { Card } from '../../components/ui/card';
 import Link from 'next/link';
+import { toSimpleObject } from '../../utils/convert';
+import { Project } from '../../models/Project';
+import { connectToDatabase } from '../../lib/db/connectDB';
 
-const MyProjects = () => {
+const MyProjects = async () => {
+	const fetchData = async () => {
+		try {
+			await connectToDatabase();
+			const res = await Project.find();
+			// console.log(toSimpleObject(res));
+			return toSimpleObject(res);
+		} catch (error) {
+			console.log('Error fetching data in edit Page.');
+			throw new Error('Error fetching data in edit Page.');
+		}
+	};
+	const data = await fetchData();
 	return (
 		<div className={twMerge('flex items-center justify-center w-full')}>
-			<div
-				className={twMerge(
-					'border border-red-400 max-w-screen-md w-full p-5'
-				)}
-			>
+			<div className={twMerge('max-w-screen-md w-full p-5')}>
 				<div
 					className={twMerge(
-						'flex border border-red-400 justify-between items-center w-full'
+						'flex justify-between items-center w-full'
 					)}
 				>
 					<h1 className="text-center font-bold text-2xl">
@@ -25,8 +36,10 @@ const MyProjects = () => {
 						Add Project
 					</Link>
 				</div>
-				<div className=" mt-4">
-					<Card />
+				<div className=" mt-4 flex flex-wrap gap-3 items-center justify-between">
+					{data.map((d, i) => (
+						<Card key={i} data={d} />
+					))}
 				</div>
 			</div>
 		</div>

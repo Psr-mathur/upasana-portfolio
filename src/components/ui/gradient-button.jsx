@@ -24,7 +24,7 @@ function GradientButton({
 	return (
 		<button
 			className={twMerge(
-				'relative inline-flex items-center justify-center p-0.5 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group',
+				'relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group',
 				gradientCSS[gradient]
 			)}
 			onClick={onClick}

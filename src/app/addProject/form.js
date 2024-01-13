@@ -3,12 +3,15 @@ import { useState } from 'react';
 import { FileInput } from '../../components/ui/file-upload-input';
 import { InputGroup } from '../../components/ui/form-input';
 import { GradientButton } from '../../components/ui/gradient-button';
-import { CreateProject } from './actions';
+import { CreateProject, EditProject } from './actions';
 import Lottie from 'lottie-react';
 import WalkingGirlAnim from '@/lottie/WalkingGirlTrolley.json';
 import SadEmojiAnim from '@/lottie/SadEmojiSwing.json';
+import DancingGirlAni from '@/lottie/DancingGirl.json';
+import { useRouter } from 'next/navigation';
 
 const FormInitialState = {
+	_id: '',
 	title: '',
 	figmaLink: '',
 	desc: '',
@@ -23,7 +26,9 @@ export default function ProjectForm({
 	const [status, setStatus] = useState({
 		loading: false,
 		error: false,
+		success: false,
 	});
+	const router = useRouter();
 	const OnChange = (e) => {
 		setFormState({ ...formState, [e.target.name]: e.target.value });
 	};
@@ -41,13 +46,26 @@ export default function ProjectForm({
 	const handleSubmit = async (e) => {
 		// console.log(formState);
 		setStatus({ ...status, loading: true });
-		const res = await CreateProject(formState);
+		const res = forEdit
+			? await EditProject(data._id, formState)
+			: await CreateProject(formState);
 
 		if (res.status === 'error') {
-			setStatus({ loading: false, error: true });
+			setStatus({ ...status, loading: false, error: true });
 			return;
 		}
-		setStatus({ ...status, loading: false });
+		setStatus({ ...status, loading: false, success: true });
+	};
+
+	const handleClose = () => {
+		setStatus({ loading: false, error: false, success: false });
+	};
+	const handleCancel = () => {
+		if (forEdit) {
+			router.back();
+		} else {
+			router.push('/myProjects');
+		}
 	};
 	return (
 		<div className=" bg-black/10 min-h-screen flex p-5 sm:p-10 items-center justify-center">
@@ -78,7 +96,15 @@ export default function ProjectForm({
 					onChange={OnChange}
 					value={formState.desc}
 				/>
-				<div className="flex items-center justify-end">
+				<div className="flex items-center justify-between">
+					{forEdit && (
+						<GradientButton
+							onClick={handleCancel}
+							label="Cancel"
+							className=" bg-white text-black hover:text-white"
+							gradient="green_blue"
+						/>
+					)}
 					<GradientButton
 						onClick={handleSubmit}
 						label={forEdit ? 'Save' : 'Create'}
@@ -87,7 +113,7 @@ export default function ProjectForm({
 				</div>
 			</div>
 			{status.loading && (
-				<div className="fixed top-0 left-0 h-screen w-screen flex     flex-col items-center justify-center border border-red-400 bg-[rgba(0,0,0,0.2)]">
+				<div className="fixed top-0 left-0 h-screen w-screen flex     flex-col items-center justify-center bg-[rgba(0,0,0,0.2)] p-5">
 					<Lottie animationData={WalkingGirlAnim} />
 					<p className=" text-[#b74925] font-semibold text-lg text-center">
 						Ooh-Ho Upasana Ma`am is{' '}
@@ -99,14 +125,42 @@ export default function ProjectForm({
 				</div>
 			)}
 			{status.error && (
-				<div className="fixed top-0 left-0 h-screen w-screen flex     flex-col items-center justify-center border border-red-400 bg-[rgba(0,0,0,0.2)]">
-					<Lottie animationData={SadEmojiAnim} />
+				<div className="fixed top-0 left-0 h-screen w-screen flex     flex-col items-center justify-center bg-black/75 p-5">
+					<div className="border-t-2 border-[#4a90e2]">
+						<Lottie animationData={SadEmojiAnim} />
+					</div>
+					<div className="">
+						<p className=" text-rose-500 text-sm text-center ">
+							Some Issues!
+						</p>
+						<p className=" text-[#70d4ca] font-semibold text-lg text-center py-2">
+							Prakash ko call krne ka waqt aa Gaya Shayad.
+						</p>
+					</div>
+					<button
+						className=" p-3 px-5 text-white font-light font-2xl border border-black rounded-full"
+						onClick={handleClose}
+					>
+						X
+					</button>
+				</div>
+			)}
+			{status.success && (
+				<div className="fixed top-0 left-0 h-screen w-screen flex     flex-col items-center justify-center bg-black/75 p-5">
+					<Lottie animationData={DancingGirlAni} />
+
 					<p className=" text-[#b74925] font-semibold text-lg text-center">
-						Prakash ko call krne ka waqt aa Gaya Shayad.
+						Ooh-Ho Upasana Ma`am{' '}
+						{forEdit
+							? 'Updated her Project!.'
+							: 'added a New Project!'}
 					</p>
-					<p className=" text-red-500 text-[10px] text-center">
-						Some Issues!
-					</p>
+					<button
+						className=" mt-2 p-3 px-5 text-white font-light font-2xl border border-black rounded-full"
+						onClick={handleClose}
+					>
+						X
+					</button>
 				</div>
 			)}
 		</div>
