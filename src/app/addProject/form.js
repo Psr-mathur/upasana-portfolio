@@ -128,7 +128,7 @@ export default function ProjectForm({
 					</p>
 				</div>
 			)}
-			{!status.error && (
+			{status.error && (
 				<div className="fixed top-0 left-0 h-screen w-screen flex     flex-col items-center justify-center bg-black/75 p-5">
 					<div className="border-t-2 border-[#4a90e2] max-h-[50vh]">
 						<Lottie
