@@ -11,7 +11,7 @@ export async function CreateProject(data) {
 		await connectToDatabase();
 		const newProject = new Project(dataToSave);
 		await newProject.save();
-		// revalidatePath('/myProjects', 'page');
+		revalidatePath('/myProjects', 'page');
 		return {
 			status: 'success',
 			message: 'New project created!',
@@ -32,7 +32,7 @@ export async function EditProject(id, data) {
 		const updatedProject = await Project.findByIdAndUpdate(id, data, {
 			new: true,
 		});
-		// revalidatePath('/myProjects', 'page');
+		revalidatePath('/myProjects', 'page');
 		// await updatedProject.save();
 		return {
 			status: 'success',
