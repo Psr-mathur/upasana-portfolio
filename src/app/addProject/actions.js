@@ -1,20 +1,24 @@
 'use server';
 
+import { revalidatePath } from 'next/cache';
 import { connectToDatabase } from '../../lib/db/connectDB';
 import { Project } from '../../models/Project';
 
 export async function CreateProject(data) {
 	// console.log(data);
+	const { _id, ...dataToSave } = data;
 	try {
 		await connectToDatabase();
-		const newProject = new Project(data);
+		const newProject = new Project(dataToSave);
 		await newProject.save();
+		// revalidatePath('/myProjects', 'page');
 		return {
 			status: 'success',
 			message: 'New project created!',
 			data: JSON.parse(JSON.stringify(newProject)),
 		};
 	} catch (error) {
+		// console.log(error);
 		return {
 			status: 'error',
 			message: 'Database Error',
@@ -28,6 +32,7 @@ export async function EditProject(id, data) {
 		const updatedProject = await Project.findByIdAndUpdate(id, data, {
 			new: true,
 		});
+		// revalidatePath('/myProjects', 'page');
 		// await updatedProject.save();
 		return {
 			status: 'success',

@@ -59,6 +59,7 @@ export default function ProjectForm({
 
 	const handleClose = () => {
 		setStatus({ loading: false, error: false, success: false });
+		router.push('/myProjects');
 	};
 	const handleCancel = () => {
 		if (forEdit) {
@@ -117,17 +118,23 @@ export default function ProjectForm({
 					<Lottie animationData={WalkingGirlAnim} />
 					<p className=" text-[#b74925] font-semibold text-lg text-center">
 						Ooh-Ho Upasana Ma`am is{' '}
-						{forEdit ? 'Editing her Project!.' : 'New Project!'}.
+						{forEdit
+							? 'Editing her Project!.'
+							: 'Creating new Project!'}
+						.
 					</p>
 					<p className=" text-[#fcf3a6] text-[10px] text-center">
 						Please Wait
 					</p>
 				</div>
 			)}
-			{status.error && (
+			{!status.error && (
 				<div className="fixed top-0 left-0 h-screen w-screen flex     flex-col items-center justify-center bg-black/75 p-5">
-					<div className="border-t-2 border-[#4a90e2]">
-						<Lottie animationData={SadEmojiAnim} />
+					<div className="border-t-2 border-[#4a90e2] max-h-[50vh]">
+						<Lottie
+							animationData={SadEmojiAnim}
+							className=" max-w-md"
+						/>
 					</div>
 					<div className="">
 						<p className=" text-rose-500 text-sm text-center ">
