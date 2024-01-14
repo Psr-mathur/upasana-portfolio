@@ -47,10 +47,12 @@ export async function EditProject(id, data) {
 }
 
 export async function DeleteProject(projectId) {
-	// console.log(projectId);
+	console.log(projectId);
 	try {
 		await connectToDatabase();
-		const deletedProject = await Project.findOneAndDelete(projectId);
+		const deletedProject = await Project.findOneAndDelete({
+			_id: projectId,
+		});
 		revalidatePath('/myProjects');
 		// await updatedProject.save();
 		return {
