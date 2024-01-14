@@ -36,7 +36,7 @@ const MyProjects = async () => {
 						Add Project
 					</Link>
 				</div>
-				<div className=" mt-4 flex flex-wrap gap-3 items-center justify-between">
+				<div className=" mt-4 flex flex-wrap gap-3 items-center justify-around">
 					{data.map((d, i) => (
 						<Card key={i} data={d} />
 					))}

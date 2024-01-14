@@ -32,12 +32,31 @@ export async function EditProject(id, data) {
 		const updatedProject = await Project.findByIdAndUpdate(id, data, {
 			new: true,
 		});
-		revalidatePath('/myProjects', 'page');
-		// await updatedProject.save();
+		revalidatePath('/myProjects');
 		return {
 			status: 'success',
 			message: 'Project edited!',
 			data: JSON.parse(JSON.stringify(updatedProject)),
+		};
+	} catch (error) {
+		return {
+			status: 'error',
+			message: 'Database Error',
+		};
+	}
+}
+
+export async function DeleteProject(projectId) {
+	// console.log(projectId);
+	try {
+		await connectToDatabase();
+		const deletedProject = await Project.findOneAndDelete(projectId);
+		revalidatePath('/myProjects');
+		// await updatedProject.save();
+		return {
+			status: 'success',
+			message: 'Project deleted!',
+			data: JSON.parse(JSON.stringify(deletedProject)),
 		};
 	} catch (error) {
 		return {
