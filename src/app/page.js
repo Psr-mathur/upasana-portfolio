@@ -1,8 +1,13 @@
+import { SectionOne } from '../components/home-page/sec1/section-1';
+import { SectionThree } from '../components/home-page/sec3/section3';
+
 const Home = () => {
 	return (
-		<h1 className="text-3xl font-bold underline min-h-screen w-full flex items-center justify-center">
-			Its Me, Upasana
-		</h1>
+		<main className="">
+			<SectionOne />
+			<SectionThree />
+			<section className="bg-gray-100 h-screen"></section>
+		</main>
 	);
 };
 
