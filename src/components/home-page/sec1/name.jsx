@@ -4,9 +4,9 @@ import ButterFlyAni from '@/lottie/Butterfly.json';
 
 export function Name() {
 	return (
-		<div className=" border border-green-500 overflow-cli">
-			<p className=" text-4xl font-bold px-5">Hi, I&apos;m</p>
-			<div className=" text-[256px] font-bold border flex overflow-clip">
+		<div className=" border border-green-500">
+			<p className=" text-2xl sm:text-4xl font-bold px-5">Hi, I&apos;m</p>
+			<div className=" text-[72px] sm:text-[96px] md:text-[128px] lg:text-[256px] font-bold border flex overflow-clip">
 				{'UPASANA'.split('').map((letter, index) => {
 					if (index !== 4)
 						return (
@@ -21,7 +21,10 @@ export function Name() {
 						>
 							<span>{letter}</span>
 							<div className="absolute top-0 z-10 scale-[2.5] left-[40%]">
-								<Lottie animationData={ButterFlyAni} />
+								<Lottie
+									animationData={ButterFlyAni}
+									className=""
+								/>
 							</div>
 						</div>
 					);

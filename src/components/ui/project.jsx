@@ -4,25 +4,34 @@ import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 import { ArrowLeft } from '../icons/arrow-left';
 
-export function Project({ ch = '', cb = '' }) {
+export function Project({
+	ch = '',
+	cb = '',
+	pd = 'Description',
+	pn = 'Project 1',
+}) {
 	return (
 		<>
-			<ProjectHeader className={twMerge('z-20', ch)} />
+			<ProjectHeader className={twMerge('z-20', ch)} pn={pn} pd={pd} />
 			<ProjectBody className={twMerge('z-10', cb)} />
 		</>
 	);
 }
 
-export const ProjectHeader = ({ className = '' }) => {
+export const ProjectHeader = ({
+	className = '',
+	pn = 'Project 1',
+	pd = 'Description',
+}) => {
 	return (
 		<div
 			className={twMerge(
-				'sticky top-0 w-full border-t border-gray-600 px-5 py-2 flex items-center justify-between bg-purple-300 h-24',
+				'sticky top-0 w-full border-t border-gray-600 px-5 py-2 flex items-center justify-between bg-white h-24',
 				className
 			)}
 		>
-			<p className="text-lg">Project 1</p>
-			<p className="text-lg">Description</p>
+			<p className="text-lg uppercase">{pn}</p>
+			<p className="text-lg uppercase">{pd}</p>
 			<Link
 				href="https://www.google.com"
 				className=" text-lg flex gap-1 items-center justify-center"
