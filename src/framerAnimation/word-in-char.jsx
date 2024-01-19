@@ -3,22 +3,25 @@ import { motion } from 'framer-motion';
 
 export function WordInChar({ word = 'DESIGNER' }) {
 	const charAni = {
-		hidden: {
+		hidden: (i) => ({
 			opacity: 0,
-			y: 50,
-			transition: {
-				duration: 0.5,
-				ease: 'easeInOut',
-			},
-		},
-		visible: {
+			y: 25,
+		}),
+		visible: (i) => ({
 			opacity: 1,
 			y: 0,
-		},
+			transition: {
+				delay: i * 0.2,
+				duration: 0.5,
+				ease: 'easeInOut',
+				type: 'spring',
+				stiffness: 100,
+			},
+		}),
 	};
 
 	return (
-		<span>
+		<span className="flex">
 			{word.split('').map((char, i) => (
 				<motion.span
 					variants={charAni}
@@ -26,14 +29,9 @@ export function WordInChar({ word = 'DESIGNER' }) {
 					// animate="visible"
 					whileInView="visible"
 					exit="hidden"
-					transition={{
-						delay: 0.5 + i * 0.25,
-						ease: 'easeInOut',
-						stiffness: 10,
-						type: 'spring',
-					}}
+					custom={i}
 					key={i}
-					className="text-blue-500"
+					className="text-blue-500 block"
 				>
 					{char}
 				</motion.span>
@@ -41,3 +39,43 @@ export function WordInChar({ word = 'DESIGNER' }) {
 		</span>
 	);
 }
+
+// 'use client';
+// import { motion } from 'framer-motion';
+
+// export function WordInChar({ word = 'DESIGNER' }) {
+// 	const charAni = {
+// 		hidden: {
+// 			opacity: 0,
+// 			y: 50,
+// 		},
+// 		visible: {
+// 			opacity: 1,
+// 			y: 0,
+// 		},
+// 	};
+
+// 	return (
+// 		<motion.span
+// 			initial="hidden"
+// 			whileInView="visible"
+// 			// animate="visible"
+// 			transition={{
+// 				staggerChildren: 0.1,
+// 				type: 'spring',
+// 				stiffness: 100,
+// 			}}
+// 			className="flex"
+// 		>
+// 			{word.split('').map((char, i) => (
+// 				<motion.span
+// 					variants={charAni}
+// 					key={i}
+// 					className="text-blue-500 block"
+// 				>
+// 					{char}
+// 				</motion.span>
+// 			))}
+// 		</motion.span>
+// 	);
+// }

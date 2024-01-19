@@ -5,7 +5,7 @@ import { StartEffect } from '../components/start-effect';
 const Home = () => {
 	return (
 		<main className="bg-white">
-			<StartEffect />
+			{/* <StartEffect /> */}
 			<SectionOne />
 			<SectionThree />
 			<section className="bg-gray-100 h-screen"></section>
