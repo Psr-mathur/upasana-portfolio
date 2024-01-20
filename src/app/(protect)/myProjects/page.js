@@ -1,9 +1,9 @@
 import { twMerge } from 'tailwind-merge';
-import { Card } from '../../components/ui/card';
+import { Card } from '@/components/ui/card';
 import Link from 'next/link';
-import { toSimpleObject } from '../../utils/convert';
-import { Project } from '../../models/Project';
-import { connectToDatabase } from '../../lib/db/connectDB';
+import { toSimpleObject } from '.@/utils/convert';
+import { Project } from '@/models/Project';
+import { connectToDatabase } from '@/lib/db/connectDB';
 
 const MyProjects = async () => {
 	const fetchData = async () => {

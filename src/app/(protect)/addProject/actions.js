@@ -9,7 +9,7 @@ export async function CreateProject(data) {
 	const { _id, ...dataToSave } = data;
 	try {
 		await connectToDatabase();
-		const newProject = new Project(dataToSave);
+		const newProject = new Projectt(dataToSave);
 		await newProject.save();
 		revalidatePath('/myProjects', 'page');
 		return {
