@@ -8,14 +8,15 @@ export const metadata = {
 
 export const inconsolata = Inconsolata({
 	subsets: ['latin'],
-	variable: '--font-sans',
-	weight: ['300', '400', '500', '600', '700'],
+	// variable: '--font-sans',
+	display: ['swap'],
+	// weight: ['300', '400', '500', '600', '700'],
 });
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={inconsolata.variable}>
-			<body className="bg-black font-sans">{children}</body>
+		<html lang="en" className={inconsolata.className}>
+			<body className="bg-black">{children}</body>
 		</html>
 	);
 }
