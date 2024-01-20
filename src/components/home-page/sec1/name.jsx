@@ -8,7 +8,7 @@ export function Name() {
 			<p className=" text-2xl sm:text-4xl font-bold px-[1vw]">
 				Hi, I&apos;m
 			</p>
-			<div className=" text-[16vw] font-bold flex overflow-clip">
+			<div className=" text-[24vw] font-bold flex overflow-clip">
 				{'UPASANA'.split('').map((letter, index) => {
 					if (index !== 4)
 						return (
@@ -22,7 +22,7 @@ export function Name() {
 							className="relative text-blue-500 leading-none overflow-clip"
 						>
 							<span>{letter}</span>
-							<div className="absolute top-0 z-[2] scale-[2.5] left-[40%]">
+							<div className="absolute top-[7%] z-[2] scale-[2.5] left-[40%]">
 								<Lottie
 									animationData={ButterFlyAni}
 									className=""
