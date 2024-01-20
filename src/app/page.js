@@ -10,7 +10,7 @@ const Home = () => {
 	return (
 		<Locomotive>
 			<main className="bg-white">
-				{/* <StartEffect /> */}
+				<StartEffect />
 				<Header />
 				<SectionOne />
 				<SectionTwo />
