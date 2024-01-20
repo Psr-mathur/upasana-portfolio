@@ -1,0 +1,36 @@
+/* .progress {
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: var(red);
+	bottom: 100px;
+} */
+
+.parallax {
+	overflow: hidden;
+	/* letter-spacing: -2px;
+	line-height: 0.8; */
+	margin: 0;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: calc(max(1vw, 16px));
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.parallax span {
+	display: block;
+	/* width: 100vw; */
+	/* border: 1px red solid; */
+	/* text-align: center; */
+	margin-right: 30px;
+	margin-left: 30px;
+}
