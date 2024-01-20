@@ -22,7 +22,7 @@ export function Name() {
 							className="relative text-blue-500 leading-none overflow-clip"
 						>
 							<span>{letter}</span>
-							<div className="absolute top-0 z-10 scale-[2.5] left-[40%]">
+							<div className="absolute top-0 z-[2] scale-[2.5] left-[40%]">
 								<Lottie
 									animationData={ButterFlyAni}
 									className=""

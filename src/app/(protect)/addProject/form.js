@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { FileInput } from '../../components/ui/file-upload-input';
-import { InputGroup } from '../../components/ui/form-input';
-import { GradientButton } from '../../components/ui/gradient-button';
+import { FileInput } from '../../../components/ui/file-upload-input';
+import { InputGroup } from '../../../components/ui/form-input';
+import { GradientButton } from '../../../components/ui/gradient-button';
 import { CreateProject, EditProject } from './actions';
 import Lottie from 'lottie-react';
 import WalkingGirlAnim from '@/lottie/WalkingGirlTrolley.json';

@@ -1,8 +1,8 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { connectToDatabase } from '../../lib/db/connectDB';
-import { Project } from '../../models/Project';
+import { connectToDatabase } from '../../../lib/db/connectDB';
+import { Project } from '../../../models/Project';
 
 export async function CreateProject(data) {
 	// console.log(data);

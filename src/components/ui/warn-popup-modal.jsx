@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { DeleteProject } from '../../app/addProject/actions';
+import { DeleteProject } from '../../app/(protect)/addProject/actions';
 import WalkingGirlBlackAnimation from '@/lottie/WalkingGirlBlack.json';
 import DeletedAni from '@/lottie/Deleted.json';
 import SadEmojiAni from '@/lottie/SadEmojiSwing.json';

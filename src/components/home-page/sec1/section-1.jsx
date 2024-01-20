@@ -4,7 +4,7 @@ import { Name } from './name';
 
 export function SectionOne() {
 	return (
-		<section className="relative overflow-x-hidden">
+		<section id="home" className="relative overflow-x-hidden">
 			<Background />
 			<div className="absolute top-0 left-0 h-[80vh] lg:h-screen w-full">
 				<div className="flex flex-col justify-around lg:justify-between items-center h-full p-5 w-full">

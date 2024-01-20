@@ -2,7 +2,7 @@ import { Project } from '../../ui/project';
 
 export function SectionThree() {
 	return (
-		<section>
+		<section id="projects">
 			<Project
 				pn="Happy Gifty"
 				ch="top-0 h-16"

@@ -1,7 +1,7 @@
 import { connectToDatabase } from '../../../lib/db/connectDB';
 import { Project } from '../../../models/Project';
 import { toSimpleObject } from '../../../utils/convert';
-import ProjectForm from '../../addProject/form';
+import ProjectForm from '../../(protect)/addProject/form';
 
 export default async function page({ params }) {
 	const projectId = params.id;
