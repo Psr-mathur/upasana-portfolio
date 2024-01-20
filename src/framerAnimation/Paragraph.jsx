@@ -5,7 +5,7 @@ export function Paragraph({ para = 'Write something here', className = '' }) {
 	const container = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: container,
-		offset: ['start 0.9', 'start 0.4'],
+		offset: ['start 0.9', 'start 0.25'],
 	});
 
 	const length = para.split(' ').length;
