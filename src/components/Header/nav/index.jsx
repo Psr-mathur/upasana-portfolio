@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { links } from './data';
 import { twMerge } from 'tailwind-merge';
+import Curve from '../curve';
 
 export const perspective = {
 	initial: {
@@ -63,6 +64,7 @@ export default function Nav() {
 					);
 				})}
 			</div>
+			<Curve />
 		</div>
 	);
 }
