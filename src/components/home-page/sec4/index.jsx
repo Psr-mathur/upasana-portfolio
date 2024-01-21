@@ -5,7 +5,7 @@ import { Form } from './form';
 
 export function SectionFour() {
 	return (
-		<section className=" bg-[#353535] min-h-[75vh] sm:min-h-[90vh]">
+		<section className=" bg-[#353535] min-h-[75vh] sm:min-h-[90vh] mt-16 flex flex-col items-center justify-center">
 			<div>
 				<h2 className="text-center text-6xl font-semibold text-[#f5f5f5] pt-10">
 					Contact Me
@@ -15,12 +15,12 @@ export function SectionFour() {
 					Available For Work
 				</p>
 			</div>
-			<div className="p-5 sm:py-20 sm:px-24 flex flex-col sm:flex-row items-center justify-between gap-10">
-				<div className="flex-1">
+			<div className="p-5 sm:py-20 sm:px-24 flex flex-col sm:flex-row items-center justify-between gap-20 sm:gap-10 w-full">
+				<div className="flex-1 w-full">
 					<Form />
 				</div>
 				<div className="flex justify-center">
-					<div className=" space-y-5">
+					<div className="flex flex-col gap-8 sm:gap-5">
 						<div className=" flex sm:flex-col gap-4">
 							<GlobeIcon className="w-6 h-6" fill="#4998f8" />
 							<span className="text-[#f5f5f5]">

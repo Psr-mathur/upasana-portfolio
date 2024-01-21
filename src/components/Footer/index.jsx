@@ -4,7 +4,7 @@ import { LinkedinIcon } from '../icons/linkedin';
 
 export function Footer() {
 	return (
-		<footer className="bg-[#353535]">
+		<footer className="bg-[#353535] border-t">
 			<div className="py-4 flex flex-col items-center justify-between gap-2">
 				<div className="flex gap-10 uppercase underline underline-offset-2 text-[#f5f5f5]">
 					<Link href={'#'} className="flex gap-2">
