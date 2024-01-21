@@ -6,7 +6,7 @@ export function Footer() {
 	return (
 		<footer className="bg-[#353535] border-t">
 			<div className="py-4 flex flex-col items-center justify-between gap-2">
-				<div className="flex gap-10 uppercase underline underline-offset-2 text-[#f5f5f5]">
+				<div className="flex gap-10 uppercase underline underline-offset-2 decoration-cyan-300 text-[#f5f5f5] font-extralight">
 					<Link href={'#'} className="flex gap-2">
 						<LinkedinIcon className="h-6 w-6" />
 						<span>Linkedin</span>
