@@ -24,7 +24,7 @@ export function Footer() {
 					<div className="flex gap-3">
 						<p>
 							<a
-								href="https://www.linkedin.com/in/yourlinkedin"
+								href="https://www.linkedin.com/in/upasana011/"
 								target="_blank"
 							>
 								Designed By:{' '}
@@ -35,7 +35,7 @@ export function Footer() {
 						</p>
 						<p>
 							<a
-								href="https://www.linkedin.com/in/yourlinkedin"
+								href="https://idkprakash.onrender.com"
 								target="_blank"
 							>
 								Created By:{' '}
