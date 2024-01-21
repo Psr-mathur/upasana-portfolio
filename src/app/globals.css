@@ -10,3 +10,28 @@
 		perspective-origin: bottom;
 	}
 }
+
+::-webkit-scrollbar {
+	/* Customize the scrollbar width */
+	scroll-behavior: smooth !important;
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	/* Customize the scrollbar track */
+	background: #f5f5f5;
+}
+
+/* ::-webkit-scrollbar-track:hover {
+	background: black;
+} */
+
+::-webkit-scrollbar-thumb {
+	/* Customize the scrollbar thumb */
+	background: black;
+}
+::-webkit-scrollbar-thumb:hover {
+	/* Customize the scrollbar thumb on hover */
+	background: lightslategray;
+}

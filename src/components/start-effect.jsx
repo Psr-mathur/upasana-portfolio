@@ -8,10 +8,12 @@ export function StartEffect() {
 	const [isLoaded, setIsLoaded] = useState(false);
 	const startani = {
 		hidden: {
+			backgoundColor: 'black',
 			opacity: 0,
 		},
 		visible: {
 			opacity: 1,
+			backgoundColor: 'black',
 			transition: {
 				duration: 1,
 				delay: 1,
@@ -19,10 +21,10 @@ export function StartEffect() {
 		},
 		exit: {
 			opacity: 0,
+			backgoundColor: 'white',
 			transition: {
 				duration: 1,
 			},
-			backgoundColor: 'white',
 		},
 	};
 	useEffect(() => {

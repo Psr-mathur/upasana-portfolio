@@ -34,7 +34,7 @@ export const ProjectHeader = ({
 	return (
 		<div
 			className={twMerge(
-				'sticky top-0 w-full border-t border-gray-600 px-5 py-2 flex flex-wrap gap-x-8 items-center justify-between bg-white h-24 overflow-hidden',
+				'sticky top-0 w-full border-t border-gray-600 px-5 py-2 flex flex-wrap gap-x-10 items-center justify-between bg-white h-24 overflow-hidden',
 				className
 			)}
 		>
