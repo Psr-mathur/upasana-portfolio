@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Hamburger } from '../ui/hamburger';
 import Nav from './nav';
-import { useSearchParams } from 'next/navigation';
 
 const menu = {
 	open: {
@@ -50,7 +49,7 @@ export default function Header() {
 						className="relative"
 					/>
 					<motion.div
-						className="rounded-2xl bg-[#353535] absolute top-0 right-0 z-[9]"
+						className="rounded-l-2xl bg-[#353535] absolute top-0 right-0 z-[9]"
 						variants={menu}
 						animate={isActive ? 'open' : 'closed'}
 						initial="closed"

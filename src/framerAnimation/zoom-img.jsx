@@ -13,7 +13,7 @@ export function ImgZoom({
 			initial={{ scale: 0.3, opacity: 0 }}
 			whileInView={{ scale: 1, opacity: 1 }}
 			exit={{ scale: 0.3, opacity: 0 }}
-			transition={{ duration: 0.75 }}
+			transition={{ duration: 0.75, ease: 'easeInOut' }}
 		>
 			<img
 				src={src}
