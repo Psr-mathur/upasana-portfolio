@@ -5,7 +5,7 @@ import { Form } from './form';
 
 export function SectionFour() {
 	return (
-		<section className=" bg-[#353535] min-h-[75vh] sm:min-h-[90vh] mt-16 flex flex-col items-center justify-center">
+		<section className=" bg-[#353535] min-h-[75vh] sm:min-h-[90vh] mt-16 flex flex-col items-center justify-center gap-10">
 			<div>
 				<h2 className="text-center text-6xl font-semibold text-[#f5f5f5] pt-10">
 					Contact Me
@@ -19,7 +19,7 @@ export function SectionFour() {
 				<div className="flex-1 w-full">
 					<Form />
 				</div>
-				<div className="flex justify-center">
+				<div className="flex justify-center py-10">
 					<div className="flex flex-col gap-8 sm:gap-5">
 						<div className=" flex sm:flex-col gap-4">
 							<GlobeIcon className="w-6 h-6" fill="#4998f8" />
