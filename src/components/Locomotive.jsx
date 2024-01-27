@@ -7,7 +7,13 @@ export function Locomotive({ children }) {
 		(async () => {
 			const LocomotiveScroll = (await import('locomotive-scroll'))
 				.default;
-			const scroll = new LocomotiveScroll();
+			const scroll = new LocomotiveScroll({
+				lenisOptions: {
+					smoothTouch: true,
+					syncTouch: true,
+					touchMultiplier: 2,
+				},
+			});
 		})();
 	});
 	return <>{children}</>;
