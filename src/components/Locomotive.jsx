@@ -11,7 +11,7 @@ export function Locomotive({ children }) {
 				lenisOptions: {
 					smoothTouch: true,
 					syncTouch: true,
-					touchMultiplier: 2,
+					touchMultiplier: 1,
 				},
 			});
 		})();
