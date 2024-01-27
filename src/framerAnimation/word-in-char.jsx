@@ -32,6 +32,8 @@ export function WordInChar({ word = 'DESIGNER' }) {
 					custom={i}
 					key={i}
 					className="text-blue-500 block"
+					data-scroll
+					data-scroll-speed={Math.random() * 8 * 0.01}
 				>
 					{char}
 				</motion.span>

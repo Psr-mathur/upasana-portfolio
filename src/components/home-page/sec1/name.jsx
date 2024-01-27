@@ -4,7 +4,7 @@ import ButterFlyAni from '@/lottie/Butterfly.json';
 
 export function Name() {
 	return (
-		<div className="relative">
+		<div data-scroll data-scroll-speed="0.5" className="relative">
 			<p className="md:absolute top-0 left-0 text-2xl sm:text-4xl font-bold px-[1vw]">
 				Hi, I&apos;m
 			</p>
