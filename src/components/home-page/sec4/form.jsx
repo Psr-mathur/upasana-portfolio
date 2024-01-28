@@ -61,6 +61,7 @@ export function Form() {
 			<InputGroup
 				label="Email"
 				name="email"
+				type="email"
 				required
 				value={email}
 				onChange={handleChange}
