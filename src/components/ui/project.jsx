@@ -3,24 +3,27 @@
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 import { ArrowLeft } from '../icons/arrow-left';
+import { ParaWordReveal } from '../../framerAnimation/para-word-reveal';
 
 export function Project({
 	ch = '',
 	cb = '',
-	pd = 'Description',
+	pd = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odit quas delectus? Eveniet, consectetur delectus. Nobis dolor, earum aut nihil libero sequi odio id expedita recusandae, a impedit excepturi non.`,
 	pn = 'Project 1',
+	psd = 'Description',
 	bgsrc = null,
 	bgclass = '',
 	src = '/dummyproject.png',
 }) {
 	return (
 		<>
-			<ProjectHeader className={twMerge('z-20', ch)} pn={pn} pd={pd} />
+			<ProjectHeader className={twMerge('z-20', ch)} pn={pn} psd={psd} />
 			<ProjectBody
 				className={twMerge('z-10', cb)}
 				bgsrc={bgsrc}
 				src={src}
 				bgclass={bgclass}
+				pd={pd}
 			/>
 		</>
 	);
@@ -29,7 +32,7 @@ export function Project({
 export const ProjectHeader = ({
 	className = '',
 	pn = 'Project 1',
-	pd = 'Description',
+	psd = 'Description',
 }) => {
 	return (
 		<div
@@ -42,7 +45,7 @@ export const ProjectHeader = ({
 				{pn}
 			</p>
 			<p className="xs:flex-1 flex justify-center text-lg uppercase order-3 xs:order-2 font-light sm:font-normal">
-				{pd}
+				{psd}
 			</p>
 			<div className="xs:flex-1 flex justify-end order-2 xs:order-3">
 				<Link
@@ -62,6 +65,7 @@ export const ProjectBody = ({
 	src = '/dummyproject.png',
 	bgsrc = null,
 	bgclass = '',
+	pd = { pd },
 }) => {
 	return (
 		<div
@@ -70,12 +74,19 @@ export const ProjectBody = ({
 				className
 			)}
 		>
-			<div className="max-w-[720px] w-[75vw] z-[5]">
-				<img
-					src={src}
-					alt="image-macbook"
-					className="w-full object-cover object-center"
+			<div className="z-[5] flex flex-col items-center gap-10">
+				<ParaWordReveal
+					className="text-lg font-light px-3 sm:px-5 py-3 sm:py-6 md:py-10 !text-justify max-w-screen-md"
+					para={pd}
 				/>
+
+				<div className="max-w-[720px] w-[75vw]">
+					<img
+						src={src}
+						alt="image-macbook"
+						className="w-full object-cover object-center"
+					/>
+				</div>
 			</div>
 			<div
 				className={twMerge(
