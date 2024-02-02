@@ -52,6 +52,9 @@ export default function Nav() {
 								<Link
 									href={href}
 									scroll={true}
+									target={
+										title == 'Resume' ? '_blank' : '_self'
+									}
 									className={twMerge(
 										'text-xl md:text-2xl hover:text-gray-400 uppercase',
 										hash === href

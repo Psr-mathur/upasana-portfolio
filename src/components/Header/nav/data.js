@@ -13,7 +13,7 @@ export const links = [
 	},
 	{
 		title: 'Resume',
-		href: 'https://idkprakash.onrender.com',
+		href: 'https://ik.imagekit.io/psrmathur/Upasana_Resume_1Yr.pdf?updatedAt=1706884919798',
 	},
 	{
 		title: 'Contact',

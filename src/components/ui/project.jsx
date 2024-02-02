@@ -14,10 +14,16 @@ export function Project({
 	bgsrc = null,
 	bgclass = '',
 	src = '/dummyproject.png',
+	figmaLink = 'https://www.google.com',
 }) {
 	return (
 		<>
-			<ProjectHeader className={twMerge('z-20', ch)} pn={pn} psd={psd} />
+			<ProjectHeader
+				className={twMerge('z-20', ch)}
+				pn={pn}
+				psd={psd}
+				figmaLink={figmaLink}
+			/>
 			<ProjectBody
 				className={twMerge('z-10', cb)}
 				bgsrc={bgsrc}
@@ -33,6 +39,7 @@ export const ProjectHeader = ({
 	className = '',
 	pn = 'Project 1',
 	psd = 'Description',
+	figmaLink,
 }) => {
 	return (
 		<div
@@ -45,11 +52,12 @@ export const ProjectHeader = ({
 				{pn}
 			</p>
 			<p className="xs:flex-1 flex justify-center text-lg uppercase order-3 xs:order-2 font-light sm:font-normal">
+				<span className=" text-[#353535] font-bold">@&nbsp;</span>
 				{psd}
 			</p>
 			<div className="xs:flex-1 flex justify-end order-2 xs:order-3">
 				<Link
-					href="https://www.google.com"
+					href={figmaLink}
 					className="text-lg flex gap-1 items-center justify-center "
 				>
 					<span>See Figma</span>

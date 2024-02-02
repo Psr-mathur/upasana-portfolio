@@ -8,20 +8,20 @@ export function ParaWordReveal({
 }) {
 	const wordAni = {
 		hidden: (i) => ({
-			opacity: 0,
-			y: 25,
-			color: 'rgb(59 130 246)',
+			// opacity: 0,
+			y: 0,
+			transform: 'rotateX(-90deg)',
+			transformOrigin: 'bottom',
 		}),
 		visible: (i) => ({
-			opacity: 1,
+			// opacity: 1,
 			y: 0,
-			color: 'rgb(30 30 30)',
+			transform: 'rotateX(0deg)',
+			transformOrigin: 'bottom',
 			transition: {
 				delay: i * 0.02,
 				duration: 0.5,
 				ease: 'easeInOut',
-				type: 'spring',
-				stiffness: 100,
 			},
 		}),
 	};
@@ -36,7 +36,7 @@ export function ParaWordReveal({
 					exit="hidden"
 					custom={i}
 					key={i}
-					className="text-blue-500 inline-block"
+					className="inline-block"
 				>
 					{word}&nbsp;
 				</motion.span>
