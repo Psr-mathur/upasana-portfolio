@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-const Tabs = ({ children }) => {
+const Tabs = ({ children, className = '' }) => {
 	const [activeTab, setActiveTab] = useState(children[0].props.label);
 
 	const handleClick = (e, newActiveTab) => {
@@ -10,7 +11,7 @@ const Tabs = ({ children }) => {
 	};
 
 	return (
-		<div className="max-w-md mx-auto">
+		<div className={twMerge('max-w-md mx-auto', className)}>
 			<div className="flex border-b border-gray-300">
 				{children.map((child) => (
 					<button

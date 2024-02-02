@@ -53,7 +53,7 @@ export default function Nav() {
 									className={twMerge(
 										'text-xl md:text-2xl hover:text-gray-400 uppercase',
 										hash === href
-											? 'text-violet-400'
+											? 'text-violet-400 font-semibold'
 											: 'text-white'
 									)}
 								>

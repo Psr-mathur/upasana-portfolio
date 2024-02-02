@@ -5,7 +5,8 @@ import { Form } from './form';
 
 export function SectionFour() {
 	return (
-		<section className=" bg-[#353535] min-h-[75vh] sm:min-h-[90vh] mt-16 flex flex-col items-center justify-center gap-10">
+		<section className=" {bg-[#353535]} min-h-[75vh] sm:min-h-[90vh] {mt-16} flex flex-col items-center justify-center gap-10 bg-[radial-gradient(ellipse_at_bottom,var(--tw-gradient-stops))] from-gray-500 to-[#353535]">
+			<div className="h-16 w-full bg-gradient-to-b from-blue-50 to-gray-400" />
 			<div>
 				<h2 className="text-center text-6xl font-semibold text-[#f5f5f5] pt-10">
 					Contact Me

@@ -54,7 +54,7 @@ export default function Header() {
 	}, [isActive, setIsActive]);
 	return (
 		<header className="fixed top-0 left-0 w-full h-full max-h-16 bg-black z-[3] shadow">
-			<div className="px-6 sm:px-10 bg-white flex items-center justify-between w-full h-full">
+			<div className="px-6 sm:px-10 bg-white flex items-center justify-between w-full h-full bg-gradient-to-b from-gray-400 to-blue-50">
 				<div>
 					<h1 className="font-extrabold text-3xl tracking-widest">
 						UR
@@ -67,7 +67,7 @@ export default function Header() {
 						className="relative"
 					/>
 					<motion.div
-						className="rounded-l-2xl bg-[#353535] absolute top-0 right-0 z-[9]"
+						className="rounded-l-2xl {bg-[#353535]} bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-gray-500 to-[#353535] absolute top-0 right-0 z-[9]"
 						// variants={menu}
 						// animate={isActive ? 'open' : 'closed'}
 						// initial="closed"
