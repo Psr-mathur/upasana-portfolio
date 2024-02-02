@@ -29,7 +29,7 @@ export function SectionTwo() {
 						para={Para}
 						className="text-justify leading-loose tracking-wide"
 					/>
-					<div className="border w-full">
+					<div className="w-full shadow">
 						<Tabs className="max-w-full">
 							<Tab label="Education">
 								<div className="flex flex-col gap-5 items-start justify-center px-2 sm:px-6">

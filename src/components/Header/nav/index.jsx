@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { links } from './data';
 import { twMerge } from 'tailwind-merge';
 import Curve from '../curve';
+import Link from 'next/link';
 
 export const perspective = {
 	initial: {
@@ -48,8 +49,9 @@ export default function Nav() {
 								animate="enter"
 								exit="exit"
 							>
-								<a
+								<Link
 									href={href}
+									scroll={true}
 									className={twMerge(
 										'text-xl md:text-2xl hover:text-gray-400 uppercase',
 										hash === href
@@ -58,7 +60,7 @@ export default function Nav() {
 									)}
 								>
 									{title}
-								</a>
+								</Link>
 							</motion.div>
 						</div>
 					);
