@@ -36,7 +36,7 @@ export default function Curve({ className = '' }) {
 				initial="initial"
 				animate="enter"
 				exit="exit"
-				fill="#45474b"
+				fill="#353535"
 				stroke="none"
 			></motion.path>
 		</svg>

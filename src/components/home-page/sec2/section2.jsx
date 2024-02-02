@@ -14,7 +14,7 @@ contribute to innovative design projects.`;
 export function SectionTwo() {
 	return (
 		<section id="aboutme">
-			<div className="{sticky top-0} h-14 flex items-center justify-center bg-white shadow z-[5] bg-gradient-to-b from-gray-400 to-blue-50">
+			<div className="{sticky top-0} h-14 flex items-center justify-center shadow z-[5] to_b_blacck_white">
 				<h1 className=" uppercase text-2xl font-semibold">About Me</h1>
 			</div>
 			<div className="flex flex-col sm:flex-row sm:gap-10 min-h-[90vh] py-6 sm:py-10 px-6 sm:px-10">

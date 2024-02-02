@@ -37,7 +37,7 @@ export const ProjectHeader = ({
 	return (
 		<div
 			className={twMerge(
-				'sticky top-0 w-full border-t border-gray-600 px-5 py-2 flex flex-wrap gap-x-10 items-center justify-between bg-white h-24 overflow-hidden bg-gradient-to-b from-gray-400 to-blue-50',
+				'sticky top-0 w-full border-t border-gray-600 px-5 py-2 flex flex-wrap gap-x-10 items-center justify-between bg-white h-24 overflow-hidden to_b_blacck_white',
 				className
 			)}
 		>
@@ -90,7 +90,7 @@ export const ProjectBody = ({
 			</div>
 			<div
 				className={twMerge(
-					'h-full w-full object-cover object-center absolute top-0 left-0 z-[3] {bg-[#e5e5e5]} bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-blue-50 to-gray-400'
+					'h-full w-full object-cover object-center absolute top-0 left-0 z-[3] {bg-[#e5e5e5]} bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-white to-[#dedddd]'
 				)}
 			>
 				{bgsrc && (

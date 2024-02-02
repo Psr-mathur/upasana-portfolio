@@ -11,6 +11,10 @@
 	}
 }
 
+.to_b_blacck_white {
+	background: linear-gradient(180deg, #dedddd, #ffffff);
+}
+
 ::-webkit-scrollbar {
 	/* Customize the scrollbar width */
 	scroll-behavior: smooth !important;
