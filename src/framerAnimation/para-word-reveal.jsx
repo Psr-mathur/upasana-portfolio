@@ -10,13 +10,13 @@ export function ParaWordReveal({
 		hidden: (i) => ({
 			// opacity: 0,
 			y: 0,
-			transform: 'rotateX(-90deg)',
+			rotateX: '-90deg',
 			transformOrigin: 'bottom',
 		}),
 		visible: (i) => ({
 			// opacity: 1,
 			y: 0,
-			transform: 'rotateX(0deg)',
+			rotateX: '0deg',
 			transformOrigin: 'bottom',
 			transition: {
 				delay: i * 0.02,
@@ -37,6 +37,7 @@ export function ParaWordReveal({
 					custom={i}
 					key={i}
 					className="inline-block"
+					style={{ willChange: 'transform' }}
 				>
 					{word}&nbsp;
 				</motion.span>
