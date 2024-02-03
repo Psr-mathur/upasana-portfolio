@@ -1,6 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { Paragraph } from '../../../framerAnimation/Paragraph';
+import {
+	MotionP,
+	MotionPx,
+	MotionPy,
+	SlideChilds,
+} from '../../../framerAnimation/slide-childrens';
 import { ImgZoom } from '../../../framerAnimation/zoom-img';
 import { Tab, Tabs } from '../../ui/tabs';
 
@@ -32,74 +38,61 @@ export function SectionTwo() {
 					<div className="w-full shadow">
 						<Tabs className="max-w-full">
 							<Tab label="Education">
-								<div className="flex flex-col gap-5 items-start justify-center px-2 sm:px-6">
-									<div>
-										<p className="font-semibold text-2xl">
-											Masters in Psychology
-										</p>
-										<p>
-											HNBG University, Garhwal,
-											Uttarakhand{' '}
-											<i className="text-xs">
-												[2020 - 2022]
-											</i>
-										</p>
-									</div>
-									<div>
-										<p className="font-semibold text-2xl">
-											Bachelors in Psychology
-										</p>
-										<p>
-											HNBG University, Garhwal,
-											Uttarakhand{' '}
-											<i className="text-xs">
-												[2017 - 2020]
-											</i>
-										</p>
-									</div>
-								</div>
+								<SlideChilds className="flex flex-col items-start justify-center px-2 sm:px-6">
+									<MotionPx className="font-semibold text-2xl">
+										Masters in Psychology
+									</MotionPx>
+									<MotionPy className="mb-5">
+										HNBG University, Garhwal, Uttarakhand{' '}
+										<i className="text-xs">[2020 - 2022]</i>
+									</MotionPy>
+
+									<MotionPx className="font-semibold text-2xl">
+										Bachelors in Psychology
+									</MotionPx>
+									<MotionPy className="mb-5">
+										HNBG University, Garhwal, Uttarakhand{' '}
+										<i className="text-xs">[2017 - 2020]</i>
+									</MotionPy>
+								</SlideChilds>
 							</Tab>
 							<Tab label="Experience">
-								<div className="flex flex-col gap-5 items-start justify-center px-2 sm:px-6">
-									<div>
-										<p className="font-semibold text-2xl">
-											Visual Design Partner L1
-										</p>
-										<p>
-											JSTigers, Banglore, India{' '}
-											<i className="text-xs">
-												[JUL 2023 - JAN 2024]
-											</i>
-										</p>
-									</div>
-									<div>
-										<p className="font-semibold text-2xl">
-											UI/UX Design Intern
-										</p>
-										<p>
-											Zyva, Banglore, India{' '}
-											<i className="text-xs">
-												[DEC 2022 - MAY 2023]
-											</i>
-										</p>
-									</div>
-								</div>
+								<SlideChilds className="flex flex-col items-start justify-center px-2 sm:px-6">
+									<MotionPx className="font-semibold text-2xl">
+										Visual Design Partner L1
+									</MotionPx>
+									<MotionPy className="mb-5">
+										JSTigers, Banglore, India{' '}
+										<i className="text-xs">
+											[JUL 2023 - JAN 2024]
+										</i>
+									</MotionPy>
+
+									<MotionPx className="font-semibold text-2xl">
+										UI/UX Design Intern
+									</MotionPx>
+									<MotionPy className="mb-5">
+										Zyva, Banglore, India{' '}
+										<i className="text-xs">
+											[DEC 2022 - MAY 2023]
+										</i>
+									</MotionPy>
+								</SlideChilds>
 							</Tab>
 							<Tab label="Courses">
-								<div className="flex flex-col gap-5 items-start justify-center px-2 sm:px-6">
-									<div>
-										<p className="font-semibold text-2xl">
-											Web and Mobile Design Course
-										</p>
-										<p>Udemy </p>
-									</div>
-									<div>
-										<p className="font-semibold text-2xl">
-											UI/UX Design Course
-										</p>
-										<p>My Captain </p>
-									</div>
-								</div>
+								<SlideChilds className="flex flex-col items-start justify-center px-2 sm:px-6">
+									<MotionPx className="font-semibold text-2xl">
+										Web and Mobile Design Course
+									</MotionPx>
+									<MotionPy className="mb-5">Udemy </MotionPy>
+
+									<MotionPx className="font-semibold text-2xl">
+										UI/UX Design Course
+									</MotionPx>
+									<MotionPy className="mb-5">
+										My Captain{' '}
+									</MotionPy>
+								</SlideChilds>
 							</Tab>
 						</Tabs>
 					</div>
