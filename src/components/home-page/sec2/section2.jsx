@@ -19,9 +19,11 @@ ences. Eager to bring my skills and fresh perspective to
 contribute to innovative design projects.`;
 export function SectionTwo() {
 	return (
-		<section id="aboutme">
+		<section id="aboutme" className="overflow-x-hidden">
 			<div className="{sticky top-0} h-14 flex items-center justify-center shadow z-[5] to_b_blacck_white">
-				<h1 className=" uppercase text-2xl font-semibold">About Me</h1>
+				<h1 className=" uppercase text-xl sm:text-2xl font-semibold">
+					About Me
+				</h1>
 			</div>
 			<div className="flex flex-col sm:flex-row sm:gap-10 min-h-[90vh] py-6 sm:py-10 px-6 sm:px-10">
 				<div className="flex-1 flex items-center justify-center p-10">
@@ -35,43 +37,43 @@ export function SectionTwo() {
 						para={Para}
 						className="text-justify leading-loose tracking-wide"
 					/>
-					<div className="w-full shadow">
+					<div className="w-full sm:shadow">
 						<Tabs className="max-w-full">
 							<Tab label="Education">
-								<SlideChilds className="flex flex-col items-start justify-center px-2 sm:px-6">
-									<MotionPx className="font-semibold text-2xl">
+								<SlideChilds className="flex flex-col items-start justify-center {px-2} sm:px-6">
+									<MotionPx className="font-semibold text-xl sm:text-2xl">
 										Masters in Psychology
 									</MotionPx>
-									<MotionPy className="mb-5">
+									<MotionPy className="mb-5 text-sm">
 										HNBG University, Garhwal, Uttarakhand{' '}
 										<i className="text-xs">[2020 - 2022]</i>
 									</MotionPy>
 
-									<MotionPx className="font-semibold text-2xl">
+									<MotionPx className="font-semibold text-xl sm:text-2xl">
 										Bachelors in Psychology
 									</MotionPx>
-									<MotionPy className="mb-5">
+									<MotionPy className="mb-5 text-sm">
 										HNBG University, Garhwal, Uttarakhand{' '}
 										<i className="text-xs">[2017 - 2020]</i>
 									</MotionPy>
 								</SlideChilds>
 							</Tab>
 							<Tab label="Experience">
-								<SlideChilds className="flex flex-col items-start justify-center px-2 sm:px-6">
-									<MotionPx className="font-semibold text-2xl">
+								<SlideChilds className="flex flex-col items-start justify-center {px-2} sm:px-6">
+									<MotionPx className="font-semibold text-xl sm:text-2xl">
 										Visual Design Partner L1
 									</MotionPx>
-									<MotionPy className="mb-5">
+									<MotionPy className="mb-5 text-sm">
 										JSTigers, Banglore, India{' '}
 										<i className="text-xs">
 											[JUL 2023 - JAN 2024]
 										</i>
 									</MotionPy>
 
-									<MotionPx className="font-semibold text-2xl">
+									<MotionPx className="font-semibold text-xl sm:text-2xl">
 										UI/UX Design Intern
 									</MotionPx>
-									<MotionPy className="mb-5">
+									<MotionPy className="mb-5 text-sm">
 										Zyva, Banglore, India{' '}
 										<i className="text-xs">
 											[DEC 2022 - MAY 2023]
@@ -80,16 +82,18 @@ export function SectionTwo() {
 								</SlideChilds>
 							</Tab>
 							<Tab label="Courses">
-								<SlideChilds className="flex flex-col items-start justify-center px-2 sm:px-6">
-									<MotionPx className="font-semibold text-2xl">
+								<SlideChilds className="flex flex-col items-start justify-center {px-2} sm:px-6">
+									<MotionPx className="font-semibold text-xl sm:text-2xl">
 										Web and Mobile Design Course
 									</MotionPx>
-									<MotionPy className="mb-5">Udemy </MotionPy>
+									<MotionPy className="mb-5 text-sm">
+										Udemy{' '}
+									</MotionPy>
 
-									<MotionPx className="font-semibold text-2xl">
+									<MotionPx className="font-semibold text-xl sm:text-2xl">
 										UI/UX Design Course
 									</MotionPx>
-									<MotionPy className="mb-5">
+									<MotionPy className="mb-5 text-sm">
 										My Captain{' '}
 									</MotionPy>
 								</SlideChilds>
