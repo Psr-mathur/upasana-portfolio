@@ -84,7 +84,7 @@ export const ProjectBody = ({
 		>
 			<div className="z-[5] flex flex-col items-center gap-10">
 				<ParaWordReveal
-					className="text-lg font-light px-3 sm:px-5 py-3 sm:py-6 md:py-10 !text-justify max-w-screen-md"
+					className="text-lg px-3 sm:px-5 py-3 sm:py-6 md:py-10 !text-justify max-w-screen-md"
 					para={pd}
 				/>
 

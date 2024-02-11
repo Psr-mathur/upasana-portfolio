@@ -5,7 +5,7 @@ import { twMerge } from 'tailwind-merge';
 
 export function ImgZoom({
 	src = 'https://picsum.photos/720/1280',
-	className = 'rounded-full aspect-square w-full max-w-screen-xs',
+	className = 'rounded-full aspect-square w-full max-w-screen-xs object-cover',
 }) {
 	return (
 		<motion.div
