@@ -10,37 +10,32 @@
 		perspective-origin: bottom;
 	}
 }
+html {
+	scroll-behavior: smooth !important;
+}
 
 .to_b_blacck_white {
 	background: linear-gradient(180deg, #dedddd, #ffffff);
 }
 
 ::-webkit-scrollbar {
-	/* Customize the scrollbar width */
 	scroll-behavior: smooth !important;
 	width: 10px;
 	height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	/* Customize the scrollbar track */
 	background: #f5f5f5;
 }
 
-/* ::-webkit-scrollbar-track:hover {
-	background: black;
-} */
-
 ::-webkit-scrollbar-thumb {
-	/* Customize the scrollbar thumb */
 	background: black;
 }
 ::-webkit-scrollbar-thumb:hover {
-	/* Customize the scrollbar thumb on hover */
 	background: lightslategray;
 }
 
-html.lenis {
+/* html.lenis {
 	height: auto;
 }
 .lenis.lenis-smooth {
@@ -54,4 +49,4 @@ html.lenis {
 }
 .lenis.lenis-scrolling iframe {
 	pointer-events: none;
-}
+} */
